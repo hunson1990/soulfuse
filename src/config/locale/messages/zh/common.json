@@ -55,7 +55,7 @@
   },
   "nsfw_modal": {
     "title": "提示",
-    "content": "您的视频创作提示包含NSFW内容，请切换我们soulfuse的自研模型。",
-    "switch_model": "切换模型"
+    "content": "此模型的输出可能受限。尝试使用 SoulFuse 以获得更具表现力的结果。",
+    "switch_model": "使用 SoulFuse 增强 →"
   }
 }

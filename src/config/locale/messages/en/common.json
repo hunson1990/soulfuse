@@ -55,7 +55,7 @@
   },
   "nsfw_modal": {
     "title": "Notice",
-    "content": "Your video prompt contains NSFW content. Please switch to our SoulFuse self-developed model.",
-    "switch_model": "Switch Model"
+    "content": "The result may be limited with this model. Try SoulFuse for more expressive outputs.",
+    "switch_model": "Enhance with SoulFuse →"
   }
 }

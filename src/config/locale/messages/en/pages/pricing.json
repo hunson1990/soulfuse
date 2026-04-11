@@ -1,0 +1,336 @@
+{
+  "metadata": {
+    "title": "Pricing",
+    "description": "Start with a plan"
+  },
+  "page": {
+    "title": "SoulFuse Pricing",
+    "sections": {
+      "pricing": {
+        "id": "pricing",
+        "title": "Pricing",
+        "description": "Get all AI video generation features. Create stunning videos from your photos in seconds.",
+        "groups": [
+          {
+            "name": "one-time",
+            "title": "Pay as you go"
+          },
+          {
+            "name": "monthly",
+            "title": "Monthly"
+          },
+          {
+            "name": "yearly",
+            "title": "Annually",
+            "is_featured": true,
+            "label": "Up to 68% OFF"
+          }
+        ],
+        "items": [
+          {
+            "title": "Starter",
+            "description": "One-time top-up of your credits.",
+            "discount_label": "",
+            "features_title": "Includes",
+            "features": [
+              "300 credits never expires",
+              "Up to 25 AI videos",
+              "Duration: 5s & 10s",
+              "Faster generation speed",
+              "No-watermark outputs",
+              "Email Support"
+            ],
+            "interval": "one-time",
+            "amount": 1490,
+            "currency": "USD",
+            "price": "$14.9",
+            "original_price": "",
+            "unit": "",
+            "is_featured": false,
+            "tip": "",
+            "button": {
+              "title": "One-time Payment",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "starter",
+            "product_name": "SoulFuse OneTime Starter",
+            "credits": 300,
+            "valid_days": 3650,
+            "group": "one-time"
+          },
+          {
+            "title": "Standard",
+            "description": "One-time top-up of your credits.",
+            "label": "Popular",
+            "discount_label": "10% OFF",
+            "features_title": "Includes",
+            "features": [
+              "1,000 credits never expires",
+              "Up to 83 AI videos",
+              "Duration: 5s & 10s",
+              "Faster generation speed",
+              "No-watermark outputs",
+              "Email Support"
+            ],
+            "interval": "one-time",
+            "amount": 4490,
+            "currency": "USD",
+            "price": "$44.9",
+            "original_price": "$50",
+            "unit": "",
+            "is_featured": true,
+            "tip": "",
+            "button": {
+              "title": "One-time Payment",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "standard",
+            "product_name": "SoulFuse OneTime Standard",
+            "credits": 1000,
+            "valid_days": 3650,
+            "group": "one-time"
+          },
+          {
+            "title": "Premium",
+            "description": "One-time top-up of your credits.",
+            "discount_label": "30% OFF",
+            "features_title": "Includes",
+            "features": [
+              "2,000 credits never expires",
+              "Up to 166 AI videos",
+              "Duration: 5s & 10s",
+              "Faster generation speed",
+              "No-watermark outputs",
+              "Email Support"
+            ],
+            "interval": "one-time",
+            "amount": 6990,
+            "currency": "USD",
+            "price": "$69.9",
+            "original_price": "$100",
+            "unit": "",
+            "is_featured": false,
+            "tip": "",
+            "button": {
+              "title": "One-time Payment",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "premium",
+            "product_name": "SoulFuse OneTime Premium",
+            "credits": 2000,
+            "valid_days": 3650,
+            "group": "one-time"
+          },
+          {
+            "title": "Starter",
+            "description": "",
+            "discount_label": "35% OFF",
+            "features_title": "Includes",
+            "features": [
+              "1,000 credits, valid for 1 month",
+              "Up to 83 AI videos for 1 month",
+              "Duration: 5s & 10s",
+              "Faster generation speed",
+              "No-watermark outputs",
+              "Email Support"
+            ],
+            "interval": "month",
+            "amount": 3290,
+            "currency": "USD",
+            "price": "$32.9",
+            "original_price": "$50",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "",
+            "button": {
+              "title": "Subscribe",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "starter-monthly",
+            "product_name": "SoulFuse Starter Monthly",
+            "credits": 1000,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Starter"
+          },
+          {
+            "title": "Standard",
+            "description": "",
+            "discount_label": "50% OFF",
+            "label": "Popular",
+            "features_title": "Includes",
+            "features": [
+              "2,000 credits, valid for 1 month",
+              "Up to 166 AI videos for 1 month",
+              "Duration: 5s & 10s",
+              "Faster generation speed",
+              "No-watermark outputs",
+              "Email Support"
+            ],
+            "interval": "month",
+            "amount": 4990,
+            "currency": "USD",
+            "price": "$49.9",
+            "original_price": "$100",
+            "unit": "/ month",
+            "is_featured": true,
+            "tip": "",
+            "button": {
+              "title": "Subscribe",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "standard-monthly",
+            "product_name": "SoulFuse Standard Monthly",
+            "credits": 2000,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Standard"
+          },
+          {
+            "title": "Premium",
+            "description": "",
+            "discount_label": "52% OFF",
+            "features_title": "Everything in Standard, plus",
+            "features": [
+              "4,000 credits, valid for 1 month",
+              "Up to 333 AI videos for 1 month",
+              "Duration: 5s & 10s",
+              "Faster generation speed",
+              "No-watermark outputs",
+              "Email Support"
+            ],
+            "interval": "month",
+            "amount": 9590,
+            "currency": "USD",
+            "price": "$95.9",
+            "original_price": "$200",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "",
+            "button": {
+              "title": "Subscribe",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "premium-monthly",
+            "product_name": "SoulFuse Premium Monthly",
+            "credits": 4000,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Premium"
+          },
+          {
+            "title": "Starter",
+            "description": "",
+            "discount_label": "52% OFF",
+            "features_title": "Includes",
+            "features": [
+              "12,000 credits, valid for 1 year",
+              "Up to 1,000 AI videos for 1 year",
+              "Duration: 5s & 10s",
+              "Faster generation speed",
+              "No-watermark outputs",
+              "Email Support"
+            ],
+            "interval": "year",
+            "amount": 29880,
+            "currency": "USD",
+            "price": "$24.9",
+            "original_price": "$50",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "$298.8 billed yearly",
+            "button": {
+              "title": "Subscribe",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "starter-yearly",
+            "product_name": "SoulFuse Starter Annually",
+            "credits": 1200,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Starter"
+          },
+          {
+            "title": "Standard",
+            "description": "",
+            "label": "Popular",
+            "discount_label": "62% OFF",
+            "features_title": "Includes",
+            "features": [
+              "24,000 credits, valid for 1 year",
+              "Up to 2,000 AI videos for 1 year",
+              "Duration: 5s & 10s",
+              "Faster generation speed",
+              "No-watermark outputs",
+              "Email Support"
+            ],
+            "interval": "year",
+            "amount": 47880,
+            "currency": "USD",
+            "price": "$39.9",
+            "original_price": "$100",
+            "unit": "/ month",
+            "is_featured": true,
+            "tip": "$478.8 billed yearly",
+            "button": {
+              "title": "Subscribe",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "standard-yearly",
+            "product_name": "SoulFuse Standard Annually",
+            "credits": 2400,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Standard"
+          },
+          {
+            "title": "Premium",
+            "description": "",
+            "discount_label": "68% OFF",
+            "features_title": "Everything in Standard, plus",
+            "features": [
+              "48,000 credits, valid for 1 year",
+              "Up to 4,000 AI videos for 1 year",
+              "Duration: 5s & 10s",
+              "Faster generation speed",
+              "No-watermark outputs",
+              "Email Support"
+            ],
+            "interval": "year",
+            "amount": 77880,
+            "currency": "USD",
+            "price": "$64.9",
+            "original_price": "$200",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "$778.8 billed yearly",
+            "button": {
+              "title": "Subscribe",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "premium-yearly",
+            "product_name": "SoulFuse Premium Annually",
+            "credits": 3600,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Premium"
+          }
+        ]
+      }
+    }
+  },
+  "messages": {
+    "current_plan": "Current Plan",
+    "processing": "Processing",
+    "cancel_anytime": "Cancel anytime"
+  }
+}

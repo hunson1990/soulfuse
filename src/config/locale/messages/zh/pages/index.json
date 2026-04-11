@@ -1,0 +1,408 @@
+{
+  "page": {
+    "show_sections": [
+      "hero",
+      "introduce",
+      "benefits",
+      "usage",
+      "features",
+      "stats",
+      "testimonials",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "将照片转化为 AI 视频",
+        "highlight_text": "AI 视频",
+        "description": "用 AI 创造浪漫、有趣和电影般的瞬间。<br/>几秒钟内将照片变成精美的视频。",
+        "announcement": {
+          "badge": "全新",
+          "title": "🎬 Soul Fuse - AI 视频生成器",
+          "url": "/pricing"
+        },
+        "tip": "🎁 首次生成视频免费",
+        "buttons": [
+          {
+            "title": "立即开始",
+            "icon": "Zap",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "阅读文档",
+            "icon": "BookOpenText",
+            "url": "/docs",
+            "target": "_blank",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "超过 1 万用户正在使用 Soul Fuse 创作视频",
+        "show_award": false,
+        "image": {
+          "src": "/imgs/features/admin.png",
+          "alt": "hero",
+          "width": 1200,
+          "height": 800
+        },
+        "image_invert": {
+          "src": "/imgs/features/admin-dark.png",
+          "alt": "hero",
+          "width": 1200,
+          "height": 800
+        },
+        "background_image": {
+          "src": "/imgs/bg/tree.jpg",
+          "alt": "hero"
+        }
+      },
+      "logos": {
+        "id": "logos",
+        "title": "ShipAny 基于以下技术构建",
+        "items": [
+          {
+            "title": "Next.js",
+            "image": {
+              "src": "/imgs/logos/nextjs.svg",
+              "alt": "Next.js"
+            }
+          },
+          {
+            "title": "React",
+            "image": {
+              "src": "/imgs/logos/react.svg",
+              "alt": "React"
+            }
+          },
+          {
+            "title": "TailwindCSS",
+            "image": {
+              "src": "/imgs/logos/tailwindcss.svg",
+              "alt": "TailwindCSS"
+            }
+          },
+          {
+            "title": "Shadcn/UI",
+            "image": {
+              "src": "/imgs/logos/shadcn.svg",
+              "alt": "Shadcn/UI"
+            }
+          },
+          {
+            "title": "Vercel",
+            "image": {
+              "src": "/imgs/logos/vercel.svg",
+              "alt": "Vercel"
+            }
+          }
+        ]
+      },
+      "introduce": {
+        "block": "features-list",
+        "id": "introduce",
+        "title": "Soul Fuse 是什么",
+        "label": "产品介绍",
+        "description": "Soul Fuse 是一个 AI 驱动的视频生成平台，只需点击几下即可将您的照片转换为精美、电影级的视频。",
+        "image": {
+          "src": "/imgs/features/landing-page.png",
+          "alt": "introduce"
+        },
+        "items": [
+          {
+            "title": "AI 驱动生成",
+            "description": "先进的 AI 技术理解您的照片，创造美丽、电影级的视频。",
+            "icon": "RiRobot2Line",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "多种风格",
+            "description": "从各种视频风格中选择，包括电影级、旅行、动作等。",
+            "icon": "RiClapperboardAiLine",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "快速处理",
+            "description": "几秒钟内生成高质量视频，无需等待数小时。",
+            "icon": "RiCloudy2Fill",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "易于使用",
+            "description": "简单直观的界面，任何人都能使用，无需技术技能。",
+            "icon": "RiSparklesLine",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "introduce"
+            }
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "benefits": {
+        "block": "features-accordion",
+        "id": "benefits",
+        "title": "为什么选择 Soul Fuse",
+        "label": "产品优势",
+        "description": "体验专为创作者、营销人员和企业设计的 AI 视频生成功能。",
+        "items": [
+          {
+            "title": "专业品质",
+            "description": "创建广播级质量的视频，看起来像由专业摄像师制作。",
+            "icon": "RiClapperboardAiLine",
+            "image": {
+              "src": "/imgs/features/user-billing.png",
+              "alt": "benefits"
+            }
+          },
+          {
+            "title": "无限创意",
+            "description": "探索多种 AI 模型、风格和定制选项的无限可能。",
+            "icon": "RiSparklesLine",
+            "image": {
+              "src": "/imgs/features/admin-settings.png",
+              "alt": "benefits"
+            }
+          },
+          {
+            "title": "价格实惠",
+            "description": "免费开始使用，随业务增长而扩展。无隐藏费用或长期合同。",
+            "icon": "RiCreditCard2Line",
+            "image": {
+              "src": "/imgs/features/landing-page.png",
+              "alt": "benefits"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "block": "features-step",
+        "id": "usage",
+        "title": "如何使用 Soul Fuse 创建视频",
+        "description": "三个简单步骤即可开始：",
+        "image": {
+          "src": "/imgs/features/1.png",
+          "alt": "usage"
+        },
+        "image_position": "left",
+        "text_align": "center",
+        "items": [
+          {
+            "title": "上传照片",
+            "description": "从设备选择并上传照片，或从我们的图库中选择。",
+            "image": {
+              "src": "/imgs/features/5.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "选择风格",
+            "description": "从各种视频风格中挑选，如电影级、旅行、动作等。",
+            "image": {
+              "src": "/imgs/features/6.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "生成并下载",
+            "description": "让 AI 创建您的视频，并以高质量下载。",
+            "image": {
+              "src": "/imgs/features/7.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "分享作品",
+            "description": "在社交媒体上分享您的精彩视频，给观众留下深刻印象。",
+            "image": {
+              "src": "/imgs/features/8.png",
+              "alt": "usage"
+            }
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "features": {
+        "id": "features",
+        "title": "Soul Fuse 的核心功能",
+        "description": "创建惊艳 AI 视频所需的一切功能。",
+        "items": [
+          {
+            "title": "先进 AI 模型",
+            "description": "采用最先进的 AI 技术，实现逼真且美观的视频生成。",
+            "icon": "RiRobot2Line"
+          },
+          {
+            "title": "多种视频风格",
+            "description": "电影级、旅行、动作、产品展示等多种风格任您选择。",
+            "icon": "RiClapperboardAiLine"
+          },
+          {
+            "title": "高质量输出",
+            "description": "以 4K 分辨率生成视频，具有流畅的动作和专业效果。",
+            "icon": "RiVideoLine"
+          },
+          {
+            "title": "快速处理",
+            "description": "通过优化的 AI 基础设施，几秒钟内创建视频。",
+            "icon": "RiCloudy2Fill"
+          },
+          {
+            "title": "轻松定制",
+            "description": "调整时长、音乐、效果等，以匹配您的创意。",
+            "icon": "RiPaletteLine"
+          },
+          {
+            "title": "社交媒体就绪",
+            "description": "以针对所有主流社交媒体平台优化的格式导出视频。",
+            "icon": "RiShareForwardLine"
+          }
+        ]
+      },
+      "stats": {
+        "id": "stats",
+        "title": "Soul Fuse 的数据",
+        "description": "加入数千名使用 Soul Fuse 的创作者。",
+        "items": [
+          {
+            "title": "1万+",
+            "description": "活跃用户"
+          },
+          {
+            "title": "10万+",
+            "description": "已创建视频"
+          },
+          {
+            "title": "50+",
+            "description": "视频风格"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "testimonials": {
+        "id": "testimonials",
+        "title": "用户对 Soul Fuse 的评价",
+        "description": "听听喜爱 Soul Fuse 的创作者和企业的心声。",
+        "items": [
+          {
+            "name": "Sarah Chen",
+            "role": "内容创作者",
+            "quote": "Soul Fuse 改变了我的内容创作工作流程。我现在可以在几分钟内创建专业视频，而不是几小时。绝对改变游戏规则！",
+            "image": {
+              "src": "/imgs/avatars/1.png",
+              "alt": "sarah"
+            }
+          },
+          {
+            "name": "Marcus Johnson",
+            "role": "营销经理",
+            "quote": "Soul Fuse 生成的视频质量令人难以置信。自从我们开始使用它，我们的社交媒体互动率提高了 300%。",
+            "image": {
+              "src": "/imgs/avatars/2.png",
+              "alt": "marcus"
+            }
+          },
+          {
+            "name": "Emma Rodriguez",
+            "role": "自由摄像师",
+            "quote": "作为一名摄像师，我起初持怀疑态度。但 Soul Fuse 的 AI 非常好，我现在用它来增强工作流程，更快地向客户交付作品。",
+            "image": {
+              "src": "/imgs/avatars/3.png",
+              "alt": "emma"
+            }
+          },
+          {
+            "name": "David Park",
+            "role": "电商店主",
+            "quote": "Soul Fuse 帮助我为网店创建产品视频，无需聘请昂贵的摄像师。我的转化率显著提高！",
+            "image": {
+              "src": "/imgs/avatars/4.png",
+              "alt": "david"
+            }
+          },
+          {
+            "name": "Lisa Wang",
+            "role": "社交媒体网红",
+            "quote": "我每周用 Soul Fuse 创建 10 多个视频。多样的风格和快速的交付时间非常适合保持观众参与度。",
+            "image": {
+              "src": "/imgs/avatars/5.png",
+              "alt": "lisa"
+            }
+          },
+          {
+            "name": "James Miller",
+            "role": "品牌经理",
+            "quote": "Soul Fuse 的视频质量一致性非常出色。我们可以毫不费力地在所有视频内容中保持品牌识别度。",
+            "image": {
+              "src": "/imgs/avatars/6.png",
+              "alt": "james"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "关于 Soul Fuse 的常见问题",
+        "description": "还有其他问题？通过 Discord 或邮件联系我们。",
+        "items": [
+          {
+            "question": "Soul Fuse 到底是什么，它是如何工作的？",
+            "answer": "Soul Fuse 是一个 AI 驱动的视频生成平台，可将您的照片转换为精美、电影级的视频。只需上传照片，选择风格，我们的 AI 就会在几秒钟内创建出漂亮的视频。"
+          },
+          {
+            "question": "使用 Soul Fuse 需要视频编辑经验吗？",
+            "answer": "不需要！Soul Fuse 专为每个人设计，用户友好。您不需要任何技术技能或视频编辑经验。只需上传照片，让 AI 完成工作。"
+          },
+          {
+            "question": "我可以使用 Soul Fuse 创建什么类型的视频？",
+            "answer": "Soul Fuse 支持多种视频风格，包括电影级、旅行、动作、产品展示、浪漫等。每种风格都针对不同的使用场景和氛围进行了优化。"
+          },
+          {
+            "question": "生成一个视频需要多长时间？",
+            "answer": "大多数视频在 30-60 秒内生成。确切时间取决于视频长度和您选择的风格复杂度。"
+          },
+          {
+            "question": "Soul Fuse 支持什么视频格式和分辨率？",
+            "answer": "Soul Fuse 以 4K 分辨率（3840x2160）生成视频，支持 MP4、WebM 等多种格式。视频针对所有主流社交媒体平台进行了优化。"
+          },
+          {
+            "question": "我可以将 Soul Fuse 视频用于商业用途吗？",
+            "answer": "可以！所有使用 Soul Fuse 生成的视频都可以用于商业目的。您拥有生成视频的权利，可以随意使用。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "今天开始创建精彩视频",
+        "description": "加入数千名使用 Soul Fuse 将照片转化为惊艳视频的创作者。",
+        "buttons": [
+          {
+            "title": "免费开始",
+            "url": "/pricing",
+            "target": "_self",
+            "icon": "Zap"
+          },
+          {
+            "title": "查看示例",
+            "url": "/showcases",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Play"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    }
+  }
+}

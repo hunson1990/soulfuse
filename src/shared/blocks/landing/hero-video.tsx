@@ -46,7 +46,7 @@ interface HeroVideoProps {
 }
 
 export function HeroVideo({
-  videoUrl = 'https://static.supermaker.ai/banner-3.mp4',
+  videoUrl = 'https://oss.soulfuse.org/videos/banner.mp4',
   title = 'Create Stunning Videos',
   subtitle = 'with AI Video Generator',
   description = 'Unlock your creative power with our leading AI Video Generator. Effortlessly craft exceptional videos through streamlined AI Workflows.',

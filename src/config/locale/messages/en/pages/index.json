@@ -392,13 +392,6 @@
             "url": "/pricing",
             "target": "_self",
             "icon": "Zap"
-          },
-          {
-            "title": "View Examples",
-            "url": "/showcases",
-            "target": "_self",
-            "variant": "outline",
-            "icon": "Play"
           }
         ],
         "className": "bg-muted"

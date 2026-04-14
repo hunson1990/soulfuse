@@ -392,13 +392,6 @@
             "url": "/pricing",
             "target": "_self",
             "icon": "Zap"
-          },
-          {
-            "title": "查看示例",
-            "url": "/showcases",
-            "target": "_self",
-            "variant": "outline",
-            "icon": "Play"
           }
         ],
         "className": "bg-muted"

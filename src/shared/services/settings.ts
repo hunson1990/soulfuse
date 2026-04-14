@@ -1061,6 +1061,15 @@ export async function getSettings() {
       tab: 'notification',
       tip: 'Required if you enabled "Sign" security setting in Lark robot. Leave empty if not using sign verification.',
     },
+    {
+      name: 'lark_keyword',
+      title: 'Lark Keyword',
+      type: 'text',
+      placeholder: '通知',
+      group: 'lark',
+      tab: 'notification',
+      tip: 'Custom keyword for Lark robot security setting. The message will include this keyword automatically.',
+    },
   ];
 
   return settings;

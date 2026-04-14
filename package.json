@@ -47,6 +47,7 @@
     "@dnd-kit/utilities": "^3.2.2",
     "@hookform/resolvers": "^5.2.1",
     "@libsql/client": "^0.15.9",
+    "@libsql/core": "^0.17.2",
     "@next/bundle-analyzer": "^15.5.7",
     "@next/third-parties": "^15.5.7",
     "@opennextjs/cloudflare": "^1.10.1",

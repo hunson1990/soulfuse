@@ -39,6 +39,9 @@ importers:
       '@libsql/client':
         specifier: ^0.15.9
         version: 0.15.15
+      '@libsql/core':
+        specifier: ^0.17.2
+        version: 0.17.2
       '@next/bundle-analyzer':
         specifier: ^15.5.7
         version: 15.5.9
@@ -1920,6 +1923,9 @@ packages:
 
   '@libsql/core@0.15.15':
     resolution: {integrity: sha512-C88Z6UKl+OyuKKPwz224riz02ih/zHYI3Ho/LAcVOgjsunIRZoBw7fjRfaH9oPMmSNeQfhGklSG2il1URoOIsA==}
+
+  '@libsql/core@0.17.2':
+    resolution: {integrity: sha512-L8qv12HZ/jRBcETVR3rscP0uHNxh+K3EABSde6scCw7zfOdiLqO3MAkJaeE1WovPsjXzsN/JBoZED4+7EZVT3g==}
 
   '@libsql/darwin-arm64@0.5.22':
     resolution: {integrity: sha512-4B8ZlX3nIDPndfct7GNe0nI3Yw6ibocEicWdC4fvQbSs/jdq/RC2oCsoJxJ4NzXkvktX70C1J4FcmmoBy069UA==}
@@ -10331,6 +10337,10 @@ snapshots:
       - utf-8-validate
 
   '@libsql/core@0.15.15':
+    dependencies:
+      js-base64: 3.7.8
+
+  '@libsql/core@0.17.2':
     dependencies:
       js-base64: 3.7.8
 

@@ -51,6 +51,9 @@ async function sendNotification(type: NotifyType, data: NotifyData) {
     dingtalk_enabled: configs.dingtalk_enabled,
     dingtalk_webhook_url: configs.dingtalk_webhook_url ? '***set***' : '***empty***',
     dingtalk_keyword: configs.dingtalk_keyword,
+    lark_enabled: configs.lark_enabled,
+    lark_webhook_url: configs.lark_webhook_url ? '***set***' : '***empty***',
+    lark_keyword: configs.lark_keyword,
   });
 
   // DingTalk
@@ -69,8 +72,21 @@ async function sendNotification(type: NotifyType, data: NotifyData) {
     });
   }
 
-  // Future: add more channels here (WeCom, Feishu, Slack, Email...)
-  // if (configs.wecom_enabled === 'true') { ... }
+  // Lark (Feishu)
+  if (configs.lark_enabled === 'true' && configs.lark_webhook_url) {
+    console.log('[Notifier] Lark conditions met, sending...');
+    await sendLark(
+      configs.lark_webhook_url,
+      configs.lark_keyword,
+      type,
+      data
+    );
+  } else {
+    console.log('[Notifier] Lark skipped:', {
+      enabled: configs.lark_enabled === 'true',
+      hasWebhook: !!configs.lark_webhook_url,
+    });
+  }
 }
 
 /**
@@ -122,6 +138,58 @@ async function sendDingTalk(
     }
   } catch (error) {
     console.error('[Notifier] DingTalk fetch error:', error);
+    throw error;
+  }
+}
+
+/**
+ * Send Lark (Feishu) message
+ */
+async function sendLark(
+  webhookUrl: string,
+  keyword: string | undefined,
+  type: NotifyType,
+  data: NotifyData
+) {
+  const { title, content } = formatMessage(type, data, keyword);
+  
+  console.log('[Notifier] Lark message prepared:', { title, content: content.slice(0, 100) + '...' });
+
+  try {
+    console.log('[Notifier] Lark fetch starting...', { webhookUrl: webhookUrl.slice(0, 50) + '...' });
+    
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+    
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        msg_type: 'markdown',
+        content: {
+          text: content,
+        },
+      }),
+      signal: controller.signal,
+    });
+    
+    clearTimeout(timeoutId);
+    console.log('[Notifier] Lark fetch completed, status:', response.status);
+
+    const responseText = await response.text();
+    console.log('[Notifier] Lark response:', {
+      status: response.status,
+      statusText: response.statusText,
+      body: responseText,
+    });
+
+    if (!response.ok) {
+      console.error('[Notifier] Failed to send Lark notification:', responseText);
+    } else {
+      console.log('[Notifier] Lark notification sent successfully');
+    }
+  } catch (error) {
+    console.error('[Notifier] Lark fetch error:', error);
     throw error;
   }
 }

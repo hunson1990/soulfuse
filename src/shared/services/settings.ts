@@ -296,6 +296,13 @@ export async function getSettingGroups() {
         'custom your <a href="https://open.dingtalk.com/document/group/robot-overview" class="text-primary" target="_blank">DingTalk</a> robot notification settings',
       tab: 'notification',
     },
+    {
+      name: 'lark',
+      title: t('groups.lark'),
+      description:
+        'custom your <a href="https://open.larksuite.com/document/client-docs/bot-v3/robot-overview" class="text-primary" target="_blank">Lark (Feishu)</a> robot notification settings',
+      tab: 'notification',
+    },
   ];
   return settingGroups;
 }
@@ -1026,6 +1033,33 @@ export async function getSettings() {
       group: 'dingtalk',
       tab: 'notification',
       tip: 'Custom keyword for DingTalk robot security setting. The message will include this keyword automatically.',
+    },
+    {
+      name: 'lark_enabled',
+      title: 'Lark Enabled',
+      type: 'switch',
+      value: 'false',
+      group: 'lark',
+      tab: 'notification',
+      tip: 'Enable Lark (Feishu) robot notifications for user registration, payments, renewals, and cancellations',
+    },
+    {
+      name: 'lark_webhook_url',
+      title: 'Lark Webhook URL',
+      type: 'text',
+      placeholder: 'https://open.larksuite.com/open-apis/bot/v2/hook/xxx',
+      group: 'lark',
+      tab: 'notification',
+      tip: 'Get this from your Lark group robot settings',
+    },
+    {
+      name: 'lark_secret',
+      title: 'Lark Secret',
+      type: 'password',
+      placeholder: 'xxx',
+      group: 'lark',
+      tab: 'notification',
+      tip: 'Required if you enabled "Sign" security setting in Lark robot. Leave empty if not using sign verification.',
     },
   ];
 

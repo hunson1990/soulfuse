@@ -171,9 +171,21 @@ async function sendLark(
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        msg_type: 'text',
-        content: {
-          text: larkContent,
+        msg_type: 'interactive',
+        card: {
+          header: {
+            title: {
+              tag: 'plain_text',
+              content: title,
+            },
+            template: 'blue',
+          },
+          elements: [
+            {
+              tag: 'markdown',
+              content: larkContent,
+            },
+          ],
         },
       }),
       signal: controller.signal,

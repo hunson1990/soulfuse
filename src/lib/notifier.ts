@@ -115,7 +115,7 @@ async function sendDingTalk(
         msgtype: 'markdown',
         markdown: {
           title,
-          text: content,
+          text: larkContent,
         },
       }),
       signal: controller.signal,
@@ -153,7 +153,12 @@ async function sendLark(
 ) {
   const { title, content } = formatMessage(type, data, keyword);
   
-  console.log('[Notifier] Lark message prepared:', { title, content: content.slice(0, 100) + '...' });
+  // Lark requires keyword to be at the beginning of the message (not wrapped in markdown)
+  // Add keyword as plain text at the start if configured
+  const keywordLine = keyword ? `${keyword}\n\n` : '';
+  const larkContent = keywordLine + content;
+  
+  console.log('[Notifier] Lark message prepared:', { title, content: larkContent.slice(0, 100) + '...' });
 
   try {
     console.log('[Notifier] Lark fetch starting...', { webhookUrl: webhookUrl.slice(0, 50) + '...' });
@@ -183,11 +188,14 @@ async function sendLark(
       body: responseText,
     });
 
-    if (!response.ok) {
-      console.error('[Notifier] Failed to send Lark notification:', responseText);
-    } else {
-      console.log('[Notifier] Lark notification sent successfully');
+    // Lark returns 200 even on error, check code in body
+    const responseJson = JSON.parse(responseText);
+    if (responseJson.code !== 0) {
+      console.error('[Notifier] Lark API error:', responseJson);
+      throw new Error(`Lark error: ${responseJson.msg} (code: ${responseJson.code})`);
     }
+
+    console.log('[Notifier] Lark notification sent successfully');
   } catch (error) {
     console.error('[Notifier] Lark fetch error:', error);
     throw error;

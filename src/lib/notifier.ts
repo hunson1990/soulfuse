@@ -153,10 +153,15 @@ async function sendLark(
 ) {
   const { title, content } = formatMessage(type, data, keyword);
   
+  // Remove app name from title for Lark (keep only keyword if present)
+  // Original: [keyword][AppName] Title -> Lark: [keyword] Title
+  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'App';
+  const larkTitle = title.replace(`[${appName}]`, '').trim();
+  
   // Keyword is already in the header title, no need to add to content
   const larkContent = content;
   
-  console.log('[Notifier] Lark message prepared:', { title, content: larkContent.slice(0, 100) + '...' });
+  console.log('[Notifier] Lark message prepared:', { title: larkTitle, content: larkContent.slice(0, 100) + '...' });
 
   try {
     console.log('[Notifier] Lark fetch starting...', { webhookUrl: webhookUrl.slice(0, 50) + '...' });
@@ -173,7 +178,7 @@ async function sendLark(
           header: {
             title: {
               tag: 'plain_text',
-              content: title,
+              content: larkTitle,
             },
             template: 'blue',
           },

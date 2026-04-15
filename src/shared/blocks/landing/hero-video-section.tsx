@@ -23,7 +23,7 @@ export function HeroVideoSection() {
 
   return (
     <HeroVideo
-      videoUrl="https://oss.soulfuse.org/videos/banner.mp4"
+      videoUrl="/video/banner.mp4"
       title="Turn Photos Into AI Videos"
       subtitle="Create romantic, fun, and cinematic moments with AI"
       description=""

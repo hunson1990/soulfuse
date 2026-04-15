@@ -158,8 +158,10 @@ async function sendLark(
   const appName = process.env.NEXT_PUBLIC_APP_NAME || 'App';
   const larkTitle = title.replace(`[${appName}]`, '').trim();
   
-  // Keyword is already in the header title, no need to add to content
-  const larkContent = content;
+  // Remove the title header from content (it's already in the card header)
+  // Original: ## ● [keyword][AppName] Title\n\n- **App**: ...
+  // Lark: - **App**: ...
+  const larkContent = content.replace(/^## .+\n\n/, '');
   
   console.log('[Notifier] Lark message prepared:', { title: larkTitle, content: larkContent.slice(0, 100) + '...' });
 

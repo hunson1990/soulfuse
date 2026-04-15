@@ -115,7 +115,7 @@ async function sendDingTalk(
         msgtype: 'markdown',
         markdown: {
           title,
-          text: larkContent,
+          text: content,
         },
       }),
       signal: controller.signal,

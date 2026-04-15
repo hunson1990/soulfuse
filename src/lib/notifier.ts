@@ -108,14 +108,14 @@ async function sendDingTalk(
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
     
-    const response = await fetch(webhookUrl, {
+      const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         msgtype: 'markdown',
         markdown: {
           title,
-          text: larkContent,
+          text: content,
         },
       }),
       signal: controller.signal,
@@ -153,10 +153,11 @@ async function sendLark(
 ) {
   const { title, content } = formatMessage(type, data, keyword);
   
-  // Lark requires keyword to be at the beginning of the message (not wrapped in markdown)
-  // Add keyword as plain text at the start if configured
-  const keywordLine = keyword ? `${keyword}\n\n` : '';
-  const larkContent = keywordLine + content;
+  // Lark requires keyword to be in the message (not wrapped in markdown)
+  // Add keyword at start and end to ensure it's found
+  const keywordPrefix = keyword ? `${keyword}\n\n` : '';
+  const keywordSuffix = keyword ? `\n\n${keyword}` : '';
+  const larkContent = keywordPrefix + content + keywordSuffix;
   
   console.log('[Notifier] Lark message prepared:', { title, content: larkContent.slice(0, 100) + '...' });
 

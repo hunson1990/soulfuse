@@ -28,37 +28,6 @@
         ],
         "items": [
           {
-            "title": "测试版",
-            "description": "用于开发测试的一次性付费。",
-            "label": "仅测试",
-            "discount_label": "",
-            "features_title": "包含",
-            "features": [
-              "1 积分用于测试",
-              "最多 1 个 AI 视频",
-              "测试支付流程",
-              "积分永不过期"
-            ],
-            "interval": "one-time",
-            "amount": 100,
-            "currency": "USD",
-            "price": "$1",
-            "original_price": "",
-            "unit": "",
-            "is_featured": false,
-            "tip": "仅供测试使用",
-            "button": {
-              "title": "测试支付",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "test",
-            "product_name": "SoulFuse 测试版",
-            "credits": 1,
-            "valid_days": 3650,
-            "group": "one-time"
-          },
-          {
             "title": "入门版",
             "description": "开启你的第一个 SaaS 创业项目。",
             "discount_label": "52% OFF",

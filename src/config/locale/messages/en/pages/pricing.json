@@ -28,37 +28,6 @@
         ],
         "items": [
           {
-            "title": "Test",
-            "description": "One-time test payment for development.",
-            "label": "Test Only",
-            "discount_label": "",
-            "features_title": "Includes",
-            "features": [
-              "1 credit for testing",
-              "Up to 1 AI video",
-              "Test payment flow",
-              "Credits never expires"
-            ],
-            "interval": "one-time",
-            "amount": 100,
-            "currency": "USD",
-            "price": "$1",
-            "original_price": "",
-            "unit": "",
-            "is_featured": false,
-            "tip": "For testing purposes only",
-            "button": {
-              "title": "Test Payment",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "test",
-            "product_name": "SoulFuse Test Plan",
-            "credits": 1,
-            "valid_days": 3650,
-            "group": "one-time"
-          },
-          {
             "title": "Starter",
             "description": "One-time top-up of your credits.",
             "discount_label": "",

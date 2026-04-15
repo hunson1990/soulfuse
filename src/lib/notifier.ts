@@ -153,11 +153,8 @@ async function sendLark(
 ) {
   const { title, content } = formatMessage(type, data, keyword);
   
-  // Lark requires keyword to be in the message (not wrapped in markdown)
-  // Add keyword at start and end to ensure it's found
-  const keywordPrefix = keyword ? `${keyword}\n\n` : '';
-  const keywordSuffix = keyword ? `\n\n${keyword}` : '';
-  const larkContent = keywordPrefix + content + keywordSuffix;
+  // Keyword is already in the header title, no need to add to content
+  const larkContent = content;
   
   console.log('[Notifier] Lark message prepared:', { title, content: larkContent.slice(0, 100) + '...' });
 

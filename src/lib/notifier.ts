@@ -100,7 +100,11 @@ async function sendDingTalk(
 ) {
   const { title, content } = formatMessage(type, data, keyword);
   
-  console.log('[Notifier] DingTalk message prepared:', { title, content: content.slice(0, 100) + '...' });
+  // Remove app name from title for DingTalk (keep only keyword if present)
+  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'App';
+  const dingTalkTitle = title.replace(`[${appName}]`, '').trim();
+  
+  console.log('[Notifier] DingTalk message prepared:', { title: dingTalkTitle, content: content.slice(0, 100) + '...' });
 
   try {
     console.log('[Notifier] DingTalk fetch starting...', { webhookUrl: webhookUrl.slice(0, 50) + '...' });
@@ -114,7 +118,7 @@ async function sendDingTalk(
       body: JSON.stringify({
         msgtype: 'markdown',
         markdown: {
-          title,
+          title: dingTalkTitle,
           text: content,
         },
       }),

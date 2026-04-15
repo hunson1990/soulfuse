@@ -51,6 +51,14 @@
     },
     "buttons": {
       "submit": "保存"
+    },
+    "test_notification": {
+      "title": "测试通知",
+      "description": "发送测试消息到钉钉和飞书，验证配置是否正确。",
+      "button": "测试两个通知",
+      "sending": "发送中...",
+      "success": "测试通知已发送",
+      "success_description": "请检查钉钉和飞书群消息"
     }
   }
 }

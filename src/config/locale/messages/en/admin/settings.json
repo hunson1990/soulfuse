@@ -51,6 +51,14 @@
     },
     "buttons": {
       "submit": "Save"
+    },
+    "test_notification": {
+      "title": "Test Notification",
+      "description": "Send a test message to both DingTalk and Lark (Feishu) to verify your configuration.",
+      "button": "Test Both Notifications",
+      "sending": "Sending...",
+      "success": "Test notification sent",
+      "success_description": "Check your DingTalk and Lark groups"
     }
   }
 }

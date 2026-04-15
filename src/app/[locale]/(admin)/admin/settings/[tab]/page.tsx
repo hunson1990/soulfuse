@@ -12,6 +12,7 @@ import {
 } from '@/shared/services/settings';
 import { Crumb } from '@/shared/types/blocks/common';
 import { Form as FormType } from '@/shared/types/blocks/form';
+import { NotificationTest } from './notification-test';
 
 export default async function SettingsPage({
   params,
@@ -116,6 +117,7 @@ export default async function SettingsPage({
             collapsible={true}
           />
         ))}
+        {tab === 'notification' && <NotificationTest />}
       </Main>
     </>
   );

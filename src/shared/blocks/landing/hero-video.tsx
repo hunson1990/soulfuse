@@ -46,7 +46,7 @@ interface HeroVideoProps {
 }
 
 export function HeroVideo({
-  videoUrl = 'https://oss.soulfuse.org/videos/banner.mp4',
+  videoUrl = 'https://oss.soulfuse.org/videos/banner.mp4?v=2',
   title = 'Create Stunning Videos',
   subtitle = 'with AI Video Generator',
   description = 'Unlock your creative power with our leading AI Video Generator. Effortlessly craft exceptional videos through streamlined AI Workflows.',

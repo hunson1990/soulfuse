@@ -100,11 +100,9 @@ async function sendDingTalk(
 ) {
   const { title, content } = formatMessage(type, data, keyword);
   
-  // Remove app name from title for DingTalk (keep only keyword if present)
-  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'App';
-  const dingTalkTitle = title.replace(`[${appName}]`, '').trim();
+  // Title already has keyword only (no appName), use as-is
   
-  console.log('[Notifier] DingTalk message prepared:', { title: dingTalkTitle, content: content.slice(0, 100) + '...' });
+  console.log('[Notifier] DingTalk message prepared:', { title, content: content.slice(0, 100) + '...' });
 
   try {
     console.log('[Notifier] DingTalk fetch starting...', { webhookUrl: webhookUrl.slice(0, 50) + '...' });
@@ -118,7 +116,7 @@ async function sendDingTalk(
       body: JSON.stringify({
         msgtype: 'markdown',
         markdown: {
-          title: dingTalkTitle,
+          title,
           text: content,
         },
       }),
@@ -157,17 +155,14 @@ async function sendLark(
 ) {
   const { title, content } = formatMessage(type, data, keyword);
   
-  // Remove app name from title for Lark (keep only keyword if present)
-  // Original: [keyword][AppName] Title -> Lark: [keyword] Title
-  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'App';
-  const larkTitle = title.replace(`[${appName}]`, '').trim();
+  // Title already has keyword only (no appName), use as-is
   
   // Remove the title header from content (it's already in the card header)
   // Original: ## ● [keyword][AppName] Title\n\n- **App**: ...
   // Lark: - **App**: ...
   const larkContent = content.replace(/^## .+\n\n/, '');
   
-  console.log('[Notifier] Lark message prepared:', { title: larkTitle, content: larkContent.slice(0, 100) + '...' });
+  console.log('[Notifier] Lark message prepared:', { title, content: larkContent.slice(0, 100) + '...' });
 
   try {
     console.log('[Notifier] Lark fetch starting...', { webhookUrl: webhookUrl.slice(0, 50) + '...' });
@@ -184,7 +179,7 @@ async function sendLark(
           header: {
             title: {
               tag: 'plain_text',
-              content: larkTitle,
+              content: title,
             },
             template: 'blue',
           },
@@ -244,10 +239,8 @@ function formatMessage(
 ): { title: string; content: string } {
   const appName = process.env.NEXT_PUBLIC_APP_NAME || 'App';
   
-  // Add keyword and appName to title
-  const keywordPrefix = keyword ? `[${keyword}]` : '';
-  const appPrefix = `[${appName}]`;
-  const titlePrefix = keywordPrefix ? `${keywordPrefix}${appPrefix} ` : `${appPrefix} `;
+  // Add keyword to title only (no appName to avoid duplication in Lark/DingTalk)
+  const titlePrefix = keyword ? `[${keyword}] ` : '';
   
   switch (type) {
     case 'register': {

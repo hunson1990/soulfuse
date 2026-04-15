@@ -115,7 +115,7 @@ async function sendDingTalk(
         msgtype: 'markdown',
         markdown: {
           title,
-          text: content,
+          text: larkContent,
         },
       }),
       signal: controller.signal,
@@ -171,7 +171,7 @@ async function sendLark(
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        msg_type: 'markdown',
+        msg_type: 'text',
         content: {
           text: content,
         },

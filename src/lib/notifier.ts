@@ -115,7 +115,7 @@ async function sendDingTalk(
         msgtype: 'markdown',
         markdown: {
           title,
-          text: larkContent,
+          text: content,
         },
       }),
       signal: controller.signal,
@@ -173,7 +173,7 @@ async function sendLark(
       body: JSON.stringify({
         msg_type: 'text',
         content: {
-          text: content,
+          text: larkContent,
         },
       }),
       signal: controller.signal,

@@ -2,8 +2,8 @@
   "name": "soul-fuse",
   "version": "1.8.2",
   "private": true,
-  "author": "SoulFuse",
-  "homepage": "https://soulfuse.ai",
+  "author": "SoulFuse AI",
+  "homepage": "https://soulfuse.org",
   "repository": {
     "type": "git",
     "url": "https://github.com/soulfuse/soul-fuse"

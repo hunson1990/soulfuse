@@ -3,7 +3,7 @@
     "id": "header",
     "brand": {
       "title": "Soul",
-      "titleSuffix": "Fuse",
+      "titleSuffix": "Fuse AI",
       "url": "/"
     },
     "nav": {
@@ -54,7 +54,7 @@
   "footer": {
     "id": "footer",
     "brand": {
-      "title": "SoulFuse",
+      "title": "SoulFuse AI",
       "description": "Turn your photos into stunning AI videos. Create romantic, fun, and cinematic moments with advanced AI technology.",
       "url": "/"
     },
